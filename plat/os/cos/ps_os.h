@@ -15,15 +15,9 @@
 #include <cos_debug.h>
 #include <string.h>
 
-/* Default allocation and deallocation functions */
-static inline void *
-ps_plat_alloc(size_t sz, coreid_t coreid)
-{
-	(void)sz;
-	(void)coreid;
 
-	return NULL;
-}
+/* Default allocation and deallocation functions */
+void * ps_plat_alloc(size_t sz, coreid_t coreid);
 
 static inline void
 ps_plat_free(void *s, size_t sz, coreid_t coreid)
